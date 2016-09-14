@@ -180,7 +180,7 @@ header .lastupdated {
   margin: 0 0 24px 0
 }
 
-header ul {
+nav ul {
   list-style:none;
   height:40px;
   padding:0;
@@ -190,7 +190,7 @@ header ul {
   width:270px;
 }
 
-header li {
+nav li {
   width:89px;
   float:left;
   border-right:1px solid #e0e0e0;
@@ -201,11 +201,11 @@ header li:first-child a {
   border-radius:5px 0 0 5px;
 }
 
-header li:last-child a {
+nav li:last-child a {
   border-radius:0 5px 5px 0;
 }
 
-header ul a {
+nav ul a {
   line-height:1;
   font-size:11px;
   color:#999;
@@ -215,11 +215,11 @@ header ul a {
   height:34px;
 }
 
-header ul a:hover {
+nav ul a:hover {
   color:#999;
 }
 
-header ul a:active {
+nav ul a:active {
   background-color:#f0f0f0;
 }
 
@@ -228,12 +228,12 @@ strong {
   font-weight:700;
 }
 
-header ul li + li + li {
+nav ul li + li + li {
   border-right:none;
   width:89px;
 }
 
-header ul a strong {
+nav ul a strong {
   font-size:14px;
   display:block;
   color:#222;
