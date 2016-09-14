@@ -162,19 +162,19 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-header title {
+header .title {
   font-size: 72px;
   font-weight: normal;
   margin: 0 0 0 0;
 }
 
-header subline {
+header .subline {
   font-size: 32px;
   font-weight: normal;
   margin: 0 0 8px 0
 }
 
-header lastupdated {
+header .lastupdated {
   font-size: 24px;
   font-weight: normal;
   margin: 0 0 24px 0
