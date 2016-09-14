@@ -257,6 +257,7 @@ section {
 
 section .chapter {
   text-transform: uppercase;
+  text-align:center;
 }
 
 section .chapter span:before,
