@@ -189,7 +189,7 @@ nav ul {
   list-style:none;
   padding:0;
 }
-nav > ul {
+nav > ul > li {
   display:block;
   width:33%;
   float:left;
