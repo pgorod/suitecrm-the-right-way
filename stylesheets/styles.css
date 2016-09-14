@@ -194,7 +194,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li > ul > li {
-  height:40px;
+  margin-top: 16px;
 }
 
 nav ul a {
