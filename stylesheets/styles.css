@@ -162,6 +162,24 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+header title {
+  font-size: 72px;
+  font-weight: normal;
+  margin: 0 0 0 0;
+}
+
+header subline {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 8px 0
+}
+
+header lastupdated {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 24px 0
+}
+
 header ul {
   list-style:none;
   height:40px;
