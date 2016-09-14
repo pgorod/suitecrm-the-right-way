@@ -182,6 +182,7 @@ header .lastupdated {
 
 nav {
   display:block;
+  height: auto;
 }
 
 
@@ -191,13 +192,18 @@ nav ul {
 }
 
 nav li  {
-  height: 24px;
+  height: inherit;
+}
+
+nav > ul {
+  clear:both;
 }
 
 nav > ul > li {
-  display:inline-block;
-  vertical-align: top;
-  width:25%;
+  display:block;
+  vertical-align:top;
+  width:33%;
+  float:left;
   padding: 0 8px 0 0;
 }
 
