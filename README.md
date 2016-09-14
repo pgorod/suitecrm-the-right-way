@@ -1,1 +1,2 @@
-# suitecrm-the-right-way
+# SuiteCRM
+## The Right Way
