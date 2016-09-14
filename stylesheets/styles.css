@@ -189,6 +189,11 @@ nav ul {
   list-style:none;
   padding:0;
 }
+
+nav li  {
+  height: 24px;
+}
+
 nav > ul > li {
   display:block;
   width:25%;
