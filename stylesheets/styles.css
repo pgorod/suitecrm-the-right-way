@@ -249,9 +249,17 @@ nav ul a strong {
 }
 
 section {
-  clear:both;
+  margin: 0 auto 0 auto;
   width:500px;
   padding-bottom:50px;
+}
+
+section .chapter {
+  text-transform: uppercase;
+}
+
+section h2 {
+  text-align: center;
 }
 
 small {
@@ -268,10 +276,6 @@ hr {
 footer {
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
-}
-
-.chapter {
-  text-transform: uppercase;
 }
 
 @media print, screen and (max-width: 960px) {
