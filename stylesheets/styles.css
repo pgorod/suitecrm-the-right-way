@@ -259,6 +259,17 @@ section .chapter {
   text-transform: uppercase;
 }
 
+section .chapter span:before,
+section .chapter  span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 0;
+  width: 600px;
+}
+
 section h2 {
   text-align: center;
 }
