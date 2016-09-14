@@ -249,6 +249,7 @@ nav ul a strong {
 }
 
 section {
+  clear:both;
   margin: 0 auto 0 auto;
   width:500px;
   padding-bottom:50px;
