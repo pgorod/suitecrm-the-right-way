@@ -196,9 +196,8 @@ nav li  {
 }
 
 nav > ul > li {
-  display:block;
+  display:inline-block;
   width:25%;
-  float:left;
   padding: 0 8px 0 0;
 }
 
