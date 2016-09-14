@@ -270,6 +270,10 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+.chapter {
+  text-transform: uppercase;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
