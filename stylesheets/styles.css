@@ -185,6 +185,9 @@ nav {
 }
 
 nav ul {
+  display:block;
+  width:33%;
+  float:left;
   list-style:none;
   padding:0;
 }
