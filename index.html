@@ -368,7 +368,7 @@
         <div class="chapter">Chapter 1</div>
         <h2>Welcome</h2>
         <p>
-          Learning SuiteCRM is hard. It helps to have to wisdom of the experienced on your side. SuiteCRM the right way is a cookbook of how to get stuff done in SuiteCRM. By creating, a series of brief guides with references to the details. So you can get the anwser quickly, but if you need more you know where to look.
+          Learning SuiteCRM is hard. It helps to have wisdom on your side. SuiteCRM the right way is a book on how to get stuff done in SuiteCRM. By creating, a series of brief guides with references to the details. So you can get the answer quickly, but if you need more you know where to look.
         </p>
         <h2 id="contribute">How to contribute</h2>
         <p>
@@ -793,9 +793,31 @@
   </g>
 </svg>
         <p>
-          When looking at SuiteCRM. You may wounder where are the models, the views and the controllers.
-          Unlike other frameworks, SuiteCRM is made up of modules. Each module contains a single model, many views, and a single controller.
+          When looking at SuiteCRM. You may ask yourself; where are the models? the views? and the controllers?
+          Unlike other frameworks, SuiteCRM is made up of modules. Each module contains a single model, many views, many actions, many meta files and a single controller. A module in SuiteCRM is almost synonymous with a database model. As you can defined relationships between modules like you would in a database.
         </p>
+        <p>
+           Since much of the framework is already implemented and takes care of the core functionality for you. You tend to configure a module rather than create a module. So you can spend more time on the features you wish to implement and less time on the setting up the things you need. 
+        </p>
+        <p>
+          This is usually done by editing one of the side effect files such as metadata, languages, vardefs etc...
+        </p>
+        <h2>Modules</h2>
+        <p>
+          The best way to create a module is to use Module Builder. If you want to get stuck into creating a module from code. You should still use module builder to create the package. It will save you hours of time. Plus you will then have a way to deploy your changes to other instances of SuiteCRM.
+        </p>
+        <p>
+          Our recommendation is to use Module Builder to create module. However, instead of deploying it you may wish to export it first, implement any customistions you want and then load it via module loader. That way, as a developer, you can get the best of both worlds. After extracting the a package, you will find a modules folder that represents the modules folder of a SuiteCRM instance. So you can continue to work on your development instance of SuiteCRM. When you are ready to deploy your module, you can replace the contents of modules the folder with your module(s). All that is left to do is you recreate the zip file. Then you can load your module using module loader.
+        </p>
+        <p>
+          In each package, the manifest file contains all the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and ensure that it will only install on the versions of SuiteCRM that you have tested. That way you can accidently break your SuiteCRM instance.
+        </p>
+        <!-- <h2>Templates (SugarObjects)</h2>
+        <h2>Models (SugarBeans)</h2>
+        <h2>Views (SugarViews)</h2>
+        <h2>Controller (SugarController)</h2>
+        <h2>Actions</h2>
+        <h2>Layouts</h2> -->
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/daniel-samson">daniel-samson</a></p>
