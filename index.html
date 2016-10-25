@@ -814,13 +814,13 @@
           The best way to create or customise a module is to use Module Builder. If you want to get stuck into creating a module from code. You should still use module builder to create the package. It will save you hours of time and it will give you a way to deploy your changes to other instances of SuiteCRM. When you wish to create upgrade safe changes to a module you should use studio.
         </p>
         <p>
-          Before deploying your new module in Module Builder, you may wish to export it first. Exporting a module will give you a zip file package which can then be installed into any SuiteCRM instance. Which is really usefull for 3rd party developers. As it contains an installer plus your new module(s).
+          Before deploying your new module in Module Builder, you may wish to export it first. Exporting a module will give you a zip file package which can then be installed into any SuiteCRM instance. This is really usefull for 3rd party developers, as a package contains an installer plus your new module(s).
         </p>
         <p>
-        	After extracting the a package, You can see the <em>modules</em> folder that represents the modules folder of a SuiteCRM instance. You can continue to develop your module on your instance of SuiteCRM. When you are ready to deploy your module, you can replace the contents of modules the folder with your module(s). You can then recreate the zip file and load your module using module loader tool.
+        	After extracting the a package, You can see the <em>modules</em> folder that represents the modules folder of a SuiteCRM instance. You can continue to develop your module on your instance of SuiteCRM. When you are ready to deploy your module, you can replace the contents of the modules folder with your module(s). You can then recreate the zip file and load your module using module loader tool.
         </p>
         <p>
-          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and ensure that it will only install on the versions of SuiteCRM that you have tested. That way you won't accidently break your production version of SuiteCRM.
+          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install the package. It is a good idea is to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
         </p>
         <!-- <h2>Templates (SugarObjects)</h2>
         <h2>Models (SugarBeans)</h2>
