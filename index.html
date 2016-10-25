@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Suitecrm-the-right-way by daniel-samson</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
@@ -12,7 +12,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="menu">
     <div class="wrapper">
    <header>
     <svg
@@ -353,17 +353,48 @@
 </svg>
         <p class="lastupdated">Last Updated: 2016-07-14 12:00:00 +0000</p>
       </header>
+      <div class="menu-title">
+        Menu
+      </div>
+      <div class="hr"></div>
       <nav>
         <ul>
           <li>
-            <a href="#welcome">Introduction</a>
             <ul>
-              <li><a href="#contribute">How to contribute</a></li>
-              <li><a href="#spread_the_word">Spread the work</a></li>
+              <li>
+                <a href="#welcome">Introduction</a>
+                <ul>
+                  <li><a href="#contribute">How to contribute</a></li>
+                  <li><a href="#spread_the_word">Spread the work</a></li>
+                </ul>
+              </li>
+              <li><a href="#modularmvc">Modular Model View Controller</a></li>
+              <li><a href="#module-development">Module Development</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#extension-development">Extending Modules</a></li>
+              <li><a href="#translating-suitecrm">Translating Labels</a></li>
+              <li><a href="#dashlet-development">Quicksilver Dashlets</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#template-development">Templating</a></li>
+              <li><a href="#theme-development">Building Themes</a></li>
+              <li><a href="#integrating-suitecrm">Integrating Applications</a></li>
+            </ul>
+          <li>
+            <ul>
+              <li><a href="#getting-help">Getting Help</a></li>
+              <li><a href="#contributing-back-to-suitecrm">Contributing Back To SuiteCRM</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
             </ul>
           </li>
         </ul>
       </nav>
+      <div class="hr"></div>
       <section id="welcome">
         <div class="chapter">Chapter 1</div>
         <h2>Introduction</h2>
@@ -381,102 +412,104 @@
           Share the love. Tell someone else about this site.
         </p>
       </section>
-            <section id="modularmvc">
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="modularmvc">
         <div class="chapter">Chapter 2</div>
         <h2>Modular Model View Controller (MVC)</h2>
-        <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="256"
-   height="256"
-   id="svg2"
-   version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="mvc.svg">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.4473592"
-     inkscape:cx="195.60752"
-     inkscape:cy="78.331542"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="927"
-     inkscape:window-height="1028"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-796.36218)">
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 73.282443,119.20611 0,20.03053 -1.954199,0"
-       id="path3108"
-       inkscape:connector-curvature="0"
-       transform="translate(0,796.36218)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 119.69466,190.0458 27.35878,0 0,0.48855"
-       id="path3110"
-       inkscape:connector-curvature="0"
-       transform="translate(0,796.36218)" />
-    <g
-       transform="matrix(0.68510833,0,0,0.68510833,17.075054,385.12003)"
-       id="g3082">
-      <rect
-         style="fill:#008066;fill-opacity:1;stroke:none"
-         id="rect3084"
-         width="157.71178"
-         height="156.022"
-         x="0.563254"
-         y="795.51727"
-         ry="56.044006"
-         rx="65.056107" />
-      <path
-         sodipodi:type="star"
-         style="fill:#88aa00;fill-opacity:1;stroke:none"
-         id="path3086"
-         sodipodi:sides="3"
-         sodipodi:cx="137.43454"
-         sodipodi:cy="78.574257"
-         sodipodi:r1="59.742355"
-         sodipodi:r2="29.871178"
-         sodipodi:arg1="0.52359878"
-         sodipodi:arg2="1.5707963"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
-         transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
-         inkscape:transform-center-y="-10.13894" />
-      <text
+        <p class="chapter-image">
+          <svg
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                  width="256"
+                  height="256"
+                  id="svg2"
+                  version="1.1"
+                  inkscape:version="0.48.4 r9939"
+                  sodipodi:docname="mvc.svg">
+            <defs
+                    id="defs4" />
+            <sodipodi:namedview
+                    id="base"
+                    pagecolor="#ffffff"
+                    bordercolor="#666666"
+                    borderopacity="1.0"
+                    inkscape:pageopacity="0.0"
+                    inkscape:pageshadow="2"
+                    inkscape:zoom="1.4473592"
+                    inkscape:cx="195.60752"
+                    inkscape:cy="78.331542"
+                    inkscape:document-units="px"
+                    inkscape:current-layer="layer1"
+                    showgrid="false"
+                    inkscape:window-width="927"
+                    inkscape:window-height="1028"
+                    inkscape:window-x="65"
+                    inkscape:window-y="24"
+                    inkscape:window-maximized="0" />
+            <metadata
+                    id="metadata7">
+              <rdf:RDF>
+                <cc:Work
+                        rdf:about="">
+                  <dc:format>image/svg+xml</dc:format>
+                  <dc:type
+                          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                  <dc:title></dc:title>
+                </cc:Work>
+              </rdf:RDF>
+            </metadata>
+            <g
+                    inkscape:label="Layer 1"
+                    inkscape:groupmode="layer"
+                    id="layer1"
+                    transform="translate(0,-796.36218)">
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 73.282443,119.20611 0,20.03053 -1.954199,0"
+                      id="path3108"
+                      inkscape:connector-curvature="0"
+                      transform="translate(0,796.36218)" />
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 119.69466,190.0458 27.35878,0 0,0.48855"
+                      id="path3110"
+                      inkscape:connector-curvature="0"
+                      transform="translate(0,796.36218)" />
+              <g
+                      transform="matrix(0.68510833,0,0,0.68510833,17.075054,385.12003)"
+                      id="g3082">
+                <rect
+                        style="fill:#008066;fill-opacity:1;stroke:none"
+                        id="rect3084"
+                        width="157.71178"
+                        height="156.022"
+                        x="0.563254"
+                        y="795.51727"
+                        ry="56.044006"
+                        rx="65.056107" />
+                <path
+                        sodipodi:type="star"
+                        style="fill:#88aa00;fill-opacity:1;stroke:none"
+                        id="path3086"
+                        sodipodi:sides="3"
+                        sodipodi:cx="137.43454"
+                        sodipodi:cy="78.574257"
+                        sodipodi:r1="59.742355"
+                        sodipodi:r2="29.871178"
+                        sodipodi:arg1="0.52359878"
+                        sodipodi:arg2="1.5707963"
+                        inkscape:flatsided="true"
+                        inkscape:rounded="0"
+                        inkscape:randomized="0"
+                        d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
+                        transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
+                        inkscape:transform-center-y="-10.13894" />
+                <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eef4d7;fill-opacity:1;stroke:none;font-family:Sans"
          x="31.542341"
@@ -524,44 +557,44 @@
            x="91.557755"
            y="906.47876"
            style="font-size:20px;fill:#f6ffd5">C</tspan></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 147.54198,182.71756 -0.27935,-0.48385 -14.07486,7.73927 14.01818,8.82929 0.82458,-1.42822"
-       id="path3112"
-       inkscape:connector-curvature="0"
-       transform="translate(0,796.36218)"
-       sodipodi:nodetypes="ccccc" />
-    <g
-       id="g3060"
-       transform="matrix(0.68510833,0,0,0.68510833,139.30168,385.12003)">
-      <rect
-         rx="65.056107"
-         ry="56.044006"
-         y="795.51727"
-         x="0.563254"
-         height="156.022"
-         width="157.71178"
-         id="rect3062"
-         style="fill:#008066;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:transform-center-y="-10.13894"
-         transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
-         d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="1.5707963"
-         sodipodi:arg1="0.52359878"
-         sodipodi:r2="29.871178"
-         sodipodi:r1="59.742355"
-         sodipodi:cy="78.574257"
-         sodipodi:cx="137.43454"
-         sodipodi:sides="3"
-         id="path3064"
-         style="fill:#88aa00;fill-opacity:1;stroke:none"
-         sodipodi:type="star" />
-      <text
+              </g>
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 147.54198,182.71756 -0.27935,-0.48385 -14.07486,7.73927 14.01818,8.82929 0.82458,-1.42822"
+                      id="path3112"
+                      inkscape:connector-curvature="0"
+                      transform="translate(0,796.36218)"
+                      sodipodi:nodetypes="ccccc" />
+              <g
+                      id="g3060"
+                      transform="matrix(0.68510833,0,0,0.68510833,139.30168,385.12003)">
+                <rect
+                        rx="65.056107"
+                        ry="56.044006"
+                        y="795.51727"
+                        x="0.563254"
+                        height="156.022"
+                        width="157.71178"
+                        id="rect3062"
+                        style="fill:#008066;fill-opacity:1;stroke:none" />
+                <path
+                        inkscape:transform-center-y="-10.13894"
+                        transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
+                        d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
+                        inkscape:randomized="0"
+                        inkscape:rounded="0"
+                        inkscape:flatsided="true"
+                        sodipodi:arg2="1.5707963"
+                        sodipodi:arg1="0.52359878"
+                        sodipodi:r2="29.871178"
+                        sodipodi:r1="59.742355"
+                        sodipodi:cy="78.574257"
+                        sodipodi:cx="137.43454"
+                        sodipodi:sides="3"
+                        id="path3064"
+                        style="fill:#88aa00;fill-opacity:1;stroke:none"
+                        sodipodi:type="star" />
+                <text
          sodipodi:linespacing="125%"
          id="text3066"
          y="841.14111"
@@ -609,53 +642,53 @@
            x="91.557755"
            id="tspan3080"
            sodipodi:role="line">C</tspan></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 121.16031,70.839695 24.42748,0 0,0.977099"
-       id="path3116"
-       inkscape:connector-curvature="0"
-       transform="translate(0,796.36218)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 121.52672,859.2324 8.30535,8.30534 0.48855,-0.48854 0,0"
-       id="path3118"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 129.9542,867.44615 -7.57252,7.57252 0.24427,0.24427"
-       id="path3122"
-       inkscape:connector-curvature="0" />
-    <g
-       id="g3007"
-       transform="matrix(0.68510833,0,0,0.68510833,17.075054,268.52597)">
-      <rect
-         rx="65.056107"
-         ry="56.044006"
-         y="795.51727"
-         x="0.563254"
-         height="156.022"
-         width="157.71178"
-         id="rect3005"
-         style="fill:#008066;fill-opacity:1;stroke:none" />
-      <path
-         inkscape:transform-center-y="-10.13894"
-         transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
-         d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="1.5707963"
-         sodipodi:arg1="0.52359878"
-         sodipodi:r2="29.871178"
-         sodipodi:r1="59.742355"
-         sodipodi:cy="78.574257"
-         sodipodi:cx="137.43454"
-         sodipodi:sides="3"
-         id="path3003"
-         style="fill:#88aa00;fill-opacity:1;stroke:none"
-         sodipodi:type="star" />
-      <text
+              </g>
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 121.16031,70.839695 24.42748,0 0,0.977099"
+                      id="path3116"
+                      inkscape:connector-curvature="0"
+                      transform="translate(0,796.36218)" />
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 121.52672,859.2324 8.30535,8.30534 0.48855,-0.48854 0,0"
+                      id="path3118"
+                      inkscape:connector-curvature="0" />
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 129.9542,867.44615 -7.57252,7.57252 0.24427,0.24427"
+                      id="path3122"
+                      inkscape:connector-curvature="0" />
+              <g
+                      id="g3007"
+                      transform="matrix(0.68510833,0,0,0.68510833,17.075054,268.52597)">
+                <rect
+                        rx="65.056107"
+                        ry="56.044006"
+                        y="795.51727"
+                        x="0.563254"
+                        height="156.022"
+                        width="157.71178"
+                        id="rect3005"
+                        style="fill:#008066;fill-opacity:1;stroke:none" />
+                <path
+                        inkscape:transform-center-y="-10.13894"
+                        transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
+                        d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
+                        inkscape:randomized="0"
+                        inkscape:rounded="0"
+                        inkscape:flatsided="true"
+                        sodipodi:arg2="1.5707963"
+                        sodipodi:arg1="0.52359878"
+                        sodipodi:r2="29.871178"
+                        sodipodi:r1="59.742355"
+                        sodipodi:cy="78.574257"
+                        sodipodi:cx="137.43454"
+                        sodipodi:sides="3"
+                        id="path3003"
+                        style="fill:#88aa00;fill-opacity:1;stroke:none"
+                        sodipodi:type="star" />
+                <text
          sodipodi:linespacing="125%"
          id="text2985"
          y="841.14111"
@@ -703,47 +736,47 @@
            x="91.557755"
            id="tspan2999"
            sodipodi:role="line">C</tspan></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 143.57252,861.64462 -9.44373,5.45234"
-       id="path3124"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 142.53435,874.53012 -8.30534,-7.32825 0,0"
-       id="path3128"
-       inkscape:connector-curvature="0" />
-    <g
-       transform="matrix(0.68510833,0,0,0.68510833,139.30168,268.52597)"
-       id="g3038">
-      <rect
-         style="fill:#008066;fill-opacity:1;stroke:none"
-         id="rect3040"
-         width="157.71178"
-         height="156.022"
-         x="0.563254"
-         y="795.51727"
-         ry="56.044006"
-         rx="65.056107" />
-      <path
-         sodipodi:type="star"
-         style="fill:#88aa00;fill-opacity:1;stroke:none"
-         id="path3042"
-         sodipodi:sides="3"
-         sodipodi:cx="137.43454"
-         sodipodi:cy="78.574257"
-         sodipodi:r1="59.742355"
-         sodipodi:r2="29.871178"
-         sodipodi:arg1="0.52359878"
-         sodipodi:arg2="1.5707963"
-         inkscape:flatsided="true"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
-         transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
-         inkscape:transform-center-y="-10.13894" />
-      <text
+              </g>
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 143.57252,861.64462 -9.44373,5.45234"
+                      id="path3124"
+                      inkscape:connector-curvature="0" />
+              <path
+                      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                      d="m 142.53435,874.53012 -8.30534,-7.32825 0,0"
+                      id="path3128"
+                      inkscape:connector-curvature="0" />
+              <g
+                      transform="matrix(0.68510833,0,0,0.68510833,139.30168,268.52597)"
+                      id="g3038">
+                <rect
+                        style="fill:#008066;fill-opacity:1;stroke:none"
+                        id="rect3040"
+                        width="157.71178"
+                        height="156.022"
+                        x="0.563254"
+                        y="795.51727"
+                        ry="56.044006"
+                        rx="65.056107" />
+                <path
+                        sodipodi:type="star"
+                        style="fill:#88aa00;fill-opacity:1;stroke:none"
+                        id="path3042"
+                        sodipodi:sides="3"
+                        sodipodi:cx="137.43454"
+                        sodipodi:cy="78.574257"
+                        sodipodi:r1="59.742355"
+                        sodipodi:r2="29.871178"
+                        sodipodi:arg1="0.52359878"
+                        sodipodi:arg2="1.5707963"
+                        inkscape:flatsided="true"
+                        inkscape:rounded="0"
+                        inkscape:randomized="0"
+                        d="m 189.17294,108.44543 -103.476798,0 51.738398,-89.613528 z"
+                        transform="matrix(0.67884468,0,0,0.67884468,-8.5266332,837.89529)"
+                        inkscape:transform-center-y="-10.13894" />
+                <text
          xml:space="preserve"
          style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eef4d7;fill-opacity:1;stroke:none;font-family:Sans"
          x="31.542341"
@@ -791,9 +824,10 @@
            x="91.557755"
            y="906.47876"
            style="font-size:20px;fill:#f6ffd5">C</tspan></text>
-    </g>
-  </g>
-</svg>
+              </g>
+            </g>
+          </svg>
+        </p>
         <p>
           When looking at SuiteCRM. You may ask yourself; where are the models? the views? and the controllers? What MVC framework does SuiteCRM deploy?
        </p>
@@ -807,7 +841,8 @@
           You can also change a module by editing one of its side effect files such as the metadata files, the languages files, or variable definitions (vardefs.php). SuiteCRM also offers ways to customise the behaviour of the application through logic hooks, function fields, actions and templates.
         </p>
       </section>
-      <section id="modularmvc">
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="module-development">
         <div class="chapter">Chapter 3</div>
         <h2>Module Development</h2>
         <p>
@@ -827,8 +862,82 @@
         <h2>Views (SugarViews)</h2>
         <h2>Controller (SugarController)</h2>
         <h2>Actions</h2>
+        <h2>Module Templates</h2>
         <h2>Layouts</h2> -->
         </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="extension-development">
+        <div class="chapter">Chapter 4</div>
+          <h2>Extending SuiteCRM</h2>
+          <p>
+          information about the the extensions framework
+          </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="translating-suitecrm">
+        <div class="chapter">Chapter 5</div>
+        <h2>Translating SuiteCRM</h2>
+        <p>
+          Labels and Translation
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="dashlet-development">
+        <div class="chapter">Chapter 6</div>
+        <h2>Dashlet Development</h2>
+        <p>
+          Creating Dashlets. Saving/Retrieving options.
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="template-development">
+        <div class="chapter">Chapter 7</div>
+        <h2>Templating</h2>
+        <p>
+          PDF/Email Templates
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="theme-development">
+        <div class="chapter">Chapter 8</div>
+        <h2>Working With Themes</h2>
+        <p>
+        create and add a theme
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="integrating-suitecrm">
+        <div class="chapter">Chapter 9</div>
+        <h2>Integrating SuiteCRM</h2>
+        <p>
+        portal development, rest and soap
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="getting-help">
+        <div class="chapter">Chapter 10</div>
+        <h2>Getting Help</h2>
+        <p>
+        info about the forums, books, the sugarcrm documentation
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="contributing-back-to-suitecrm">
+        <div class="chapter">Chapter 11</div>
+        <h2>Contributing Back To SuiteCRM</h2>
+        <p>
+        info how to raise issues, commit code, languages
+        </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
+      <section id="faq">
+        <div class="chapter">Chapter 12</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+          FAQ
+          </p>
+      </section>
+      <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <footer>
         <p>This project is maintained by <a href="https://github.com/daniel-samson">daniel-samson</a></p>
       </footer>
