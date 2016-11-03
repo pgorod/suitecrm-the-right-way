@@ -376,7 +376,7 @@
             <ul>
               <li><a href="#extension-development">Extending Modules</a></li>
               <li><a href="#translating-suitecrm">Translating Labels</a></li>
-              <li><a href="#dashlet-development">Quicksilver Dashlets</a></li>
+              <li><a href="#dashlet-development">Dashlet Development</a></li>
             </ul>
           </li>
           <li>
@@ -835,7 +835,7 @@
           SuiteCRM is made up of modules. A module is a MVC container. Each module contains a single model, a single controller with many views and side effect files. A module in SuiteCRM is almost synonymous with a database model. A module represents a single database table. It defines which fields are available and which modules it is related to.
         </p>
         <p>
-           When developing in SuiteCRM, you can create a module using module builder rather than a creating module from scratch. The SuiteCRM framework takes care of the application functionality for you. This enables you to spend more time on the features you wish to implement and less time on the setting up the things you need. If you need to configure and customise a module, you can use studio instead.
+           When developing in SuiteCRM, you can create a module using module builder rather than creating a module from scratch. The SuiteCRM framework takes care of the application functionality for you. This enables you to spend more time on the features you wish to implement and less time on the setting up the things you need. If you need to configure and customise a module, you should use studio to extend an existing module.
         </p>
         <p>
           You can also change a module by editing one of its side effect files such as the metadata files, the languages files, or variable definitions (vardefs.php). SuiteCRM also offers ways to customise the behaviour of the application through logic hooks, function fields, actions and templates.
@@ -846,16 +846,16 @@
         <div class="chapter">Chapter 3</div>
         <h2>Module Development</h2>
         <p>
-          The best way to create or customise a module is to use Module Builder. If you want to get stuck into creating a module from code. You should still use module builder to create the package. It will save you hours of time and it will give you a way to deploy your changes to other instances of SuiteCRM. When you wish to create upgrade safe changes to a module you should use studio.
+          The best way to create a module is to use Module Builder. When you want to create a module from code. You should still use module builder to create the package. It will save you hours of time and it will give you a way to deploy your changes to other instances of SuiteCRM. When you wish to create upgrade safe changes to a module you should use studio.
         </p>
         <p>
-          Before deploying your new module in Module Builder, you may wish to export it first. Exporting a module will give you a zip file package which can then be installed into any SuiteCRM instance. This is really usefull for 3rd party developers, as a package contains an installer plus your new module(s).
+          Before deploying your new package in Module Builder, you may wish to export it first. Exporting a module will give you a zip file package which can then be installed into any SuiteCRM instance. This is really useful for 3rd party developers, as a package contains an installer plus your new module(s).
         </p>
         <p>
         	After extracting the a package, You can see the <em>modules</em> folder that represents the modules folder of a SuiteCRM instance. You can continue to develop your module on your instance of SuiteCRM. When you are ready to deploy your module, you can replace the contents of the modules folder with your module(s). You can then recreate the zip file and load your module using module loader tool.
         </p>
         <p>
-          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install the package. It is a good idea is to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
+          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install your package. It is a good idea is to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
         </p>
         <!-- <h2>Templates (SugarObjects)</h2>
         <h2>Models (SugarBeans)</h2>
@@ -870,13 +870,23 @@
         <div class="chapter">Chapter 4</div>
           <h2>Extending SuiteCRM</h2>
           <p>
-          information about the the extensions framework
+          When you need to customise a module, you should use Studio to extend an existing module. Studio is just like Module Builder. However, Studio creates changes which persist after you upgrade your instance of SuiteCRM. This is achieve through the extensions framework in SuiteCRM.
+          </p>
+          <p>
+            When modifying a module that comes with SuiteCRM, it is recommended that you use the extensions framework instead of modifying a module directly. This ensures that when you upgrade your instance of SuiteCRM, you changes will not be overwritten by the upgrade installer.
+          </p>
+          <p>
+            All extensions exist in the <em>custom</em> directory of a SuiteCRM instance. The custom directory is the root directory for all extensions. You can copy any side effect files into the custom directory. As long as you keep the directory structure in tact, SuiteCRM will try and load the side effect files. Classes can also be extended but you must add the "<em>Custom</em>" prefix to the name of the class. If you are extending a class form the modules directory, you also need change the base class so your class inherits from the class in modules. This ensures that the class behaves correctly.
+          </p>
+          <p>
+            Unfortunately, some parts of SuiteCRM cannot be extended. For example, many of the libraries in the <em>include</em> directory cannot be extended.
           </p>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="translating-suitecrm">
         <div class="chapter">Chapter 5</div>
         <h2>Translating SuiteCRM</h2>
+        <p></p>
         <p>
           Labels and Translation
         </p>
@@ -943,6 +953,6 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
   </body>
 </html>
