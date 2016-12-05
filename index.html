@@ -363,10 +363,10 @@
             <ul>
               <li>
                 <a href="#welcome">Introduction</a>
-                <ul>
-                  <li><a href="#contribute">How to contribute</a></li>
-                  <li><a href="#spread_the_word">Spread the work</a></li>
-                </ul>
+                <!--<ul>-->
+                  <!--<li><a href="#contribute">How to contribute</a></li>-->
+                  <!--<li><a href="#spread_the_word">Spread the work</a></li>-->
+                <!--</ul>-->
               </li>
               <li><a href="#modularmvc">Modular Model View Controller</a></li>
               <li><a href="#module-development">Module Development</a></li>
@@ -840,6 +840,14 @@
         <p>
           You can also change a module by editing one of its side effect files such as the metadata files, the languages files, or variable definitions (vardefs.php). SuiteCRM also offers ways to customise the behaviour of the application through logic hooks, function fields, actions and templates.
         </p>
+        <h6>References</h6>
+        <small>
+          <ul>
+            <li>
+            <a href="http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Introduction/">SugarCRM CE 6.5 Documentation</a>
+            </li>
+          </ul>
+        </small>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="module-development">
@@ -857,13 +865,17 @@
         <p>
           In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install your package. It is a good idea is to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
         </p>
-        <!-- <h2>Templates (SugarObjects)</h2>
-        <h2>Models (SugarBeans)</h2>
-        <h2>Views (SugarViews)</h2>
-        <h2>Controller (SugarController)</h2>
-        <h2>Actions</h2>
-        <h2>Module Templates</h2>
-        <h2>Layouts</h2> -->
+        <h6>References</h6>
+        <small>
+          <ul>
+            <li>
+            <a href="http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Introduction/#Module_Framework">SugarCRM CE 6.5 - Modules</a>
+            </li>
+            <li>
+              <a href="https://leanpub.com/suitecrmfordevelopers">SuiteCRM for Developers by Jim Mackin</a>
+            </li>
+          </ul>
+        </small>
         </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="extension-development">
@@ -881,6 +893,14 @@
           <p>
             Unfortunately, some parts of SuiteCRM cannot be extended. For example, many of the libraries in the <em>include</em> directory cannot be extended.
           </p>
+        <h6>References</h6>
+        <small>
+          <ul>
+            <li>
+              <a href="http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_6.5/Introduction/#Extension_Framework">SugarCRM CE 6.5 - Extensions Framework</a>
+            </li>
+          </ul>
+        </small>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="translating-suitecrm">
@@ -888,8 +908,61 @@
         <h2>Translating SuiteCRM</h2>
         <p></p>
         <p>
-          Labels and Translation
+          SuiteCRM employs labels as a means to communicate intent to a user. Labels are inside buttons, next to fields, and above entire sections of elements.
+          Labels are used everywhere in SuiteCRM. The great thing about labels is that they are translatable.
+          So users from many regions can use the same instance of SuiteCRM, share the same data, and use the same features at the same time.
         </p>
+        <p>
+          Labels can be accessed anywhere in the application. SuiteCRM offers different mechanisms for developers to get access to labels.
+        </p>
+        <p>
+          All labels are split up into two camps. Application wide labels and module wide labels.
+          The application wide labels are general labels which happen to be used everywhere in the application. They can also include drop down values.
+          Module wide labels however, can only be accessed when the user is accessing a module or if that module is related to an other module.
+        </p>
+        <h3 id="how-labels-work">How Do Labels work?</h3>
+        <p>SuiteCRM defines languages through language packs. When a language pack is installed you can edit the labels for that language pack.</p>
+        <p>All application wide labels are kept in <em>include/languages/</em> and/or <em>custom/extension/application/Ext/Language/</em></p>
+        <p>Module wide labels are kept in <em>module/&lt;module&gt;/</em> and/or <em>custom/modules/&lt;module&gt;/</em></p>
+        <p>A language is assigned prefix. The built in prefix is en_us. When you first install SuiteCRM, you will notice that there are many en_us.lang.php files place through out the application.</p>
+        <p>Each language file containers a list of key/value pairs. The keys are used by developers to include in their code. The values are used by the translators/developers to describe intent to the user.
+          SuiteCRM employs these keys as a reference, each key is referenced by the different language packs.
+          So that the application doesn't need to know the translation until it has to use it.
+          Then SuiteCRM can simply look up the key for the language of the current user.
+        </p>
+        <p>Example of a simple label:</p>
+        <pre>
+          'Cases' => 'Cases',
+        </pre>
+        <p>Example of a dropdown:</p>
+        <pre>
+          'opportunity_relationship_type_dom' => array(
+            '' => '',
+            'Primary Decision Maker' => 'Primary Decision Maker',
+            'Business Decision Maker' => 'Business Decision Maker',
+            'Business Evaluator' => 'Business Evaluator',
+            'Technical Decision Maker' => 'Technical Decision Maker',
+            'Technical Evaluator' => 'Technical Evaluator',
+            'Executive Sponsor' => 'Executive Sponsor',
+            'Influencer' => 'Influencer',
+            'Other' => 'Other',
+        ),
+        </pre>
+        <p>You can also edit labels in studio and also with the dropdown editor</p>
+        <h6>References</h6>
+        <small>
+          <ul>
+            <li>
+              <a href="https://suitecrm.com/forum/international-language-support/7919-guide-to-install-a-language-pack-that-we-can-all-understand">How to install language packs</a>
+            </li>
+            <li>
+              <a href="https://crowdin.com/project/suitecrmtranslations">Translations</a>
+            </li>
+            <li>
+              <a href="https://leanpub.com/suitecrmfordevelopers">Chapter 9 - SuiteCRM for Developers by Jim Mackin</a>
+            </li>
+          </ul>
+        </small>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="dashlet-development">
@@ -903,16 +976,17 @@
       <section id="template-development">
         <div class="chapter">Chapter 7</div>
         <h2>Templating</h2>
-        <p>
+        <small>
           PDF/Email Templates
-        </p>
+        </small>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>
       <section id="theme-development">
         <div class="chapter">Chapter 8</div>
         <h2>Working With Themes</h2>
         <p>
-        create and add a theme
+          create and add a theme
+          creating custom templates
         </p>
       </section>
       <div class="back-to-top"><a href="#menu">Back To Top</a></div>

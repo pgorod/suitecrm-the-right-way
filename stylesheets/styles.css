@@ -41,6 +41,14 @@ a:hover {
   color:#069;
 }
 
+small a {
+  color:#39c;
+  display:block;
+  font-size:11px;
+  margin-top:-0.3em;
+  text-decoration:none;
+}
+
 a small {
   font-size:11px;
   color:#777;
