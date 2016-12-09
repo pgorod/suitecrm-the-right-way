@@ -863,7 +863,7 @@
         	After extracting the a package, You can see the <em>modules</em> folder that represents the modules folder of a SuiteCRM instance. You can continue to develop your module on your instance of SuiteCRM. When you are ready to deploy your module, you can replace the contents of the modules folder with your module(s). You can then recreate the zip file and load your module using module loader tool.
         </p>
         <p>
-          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install your package. It is a good idea is to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
+          In each package, the manifest file contains all of the installation details including the checks and constraints used during the installation process. A good practice is to change the version of a package before you deploy it, and specify which versions of SuiteCRM can install your package. It is a good idea to only specify the versions that you have tested. That way you won't accidently break your production version of SuiteCRM.
         </p>
         <h6>References</h6>
         <small>
@@ -882,7 +882,7 @@
         <div class="chapter">Chapter 4</div>
           <h2>Extending SuiteCRM</h2>
           <p>
-          When you need to customise a module, you should use Studio to extend an existing module. Studio is just like Module Builder. However, Studio creates changes which persist after you upgrade your instance of SuiteCRM. This is achieve through the extensions framework in SuiteCRM.
+          When you need to customise a module, you should use Studio to extend an existing module. Studio is just like Module Builder. However, Studio creates changes which persist after you upgrade your instance of SuiteCRM. This is achieved through the extensions framework in SuiteCRM.
           </p>
           <p>
             When modifying a module that comes with SuiteCRM, it is recommended that you use the extensions framework instead of modifying a module directly. This ensures that when you upgrade your instance of SuiteCRM, you changes will not be overwritten by the upgrade installer.
@@ -923,16 +923,16 @@
         <h3 id="how-labels-work">How Do Labels work?</h3>
         <p>SuiteCRM defines languages through language packs. When a language pack is installed you can edit the labels for that language pack.</p>
         <p>All application wide labels are kept in <em>include/languages/</em> and/or <em>custom/extension/application/Ext/Language/</em></p>
-        <p>Module wide labels are kept in <em>module/&lt;module&gt;/</em> and/or <em>custom/modules/&lt;module&gt;/</em></p>
+        <p>Module wide labels are kept in <em>module/&lt;module&gt;/languages</em> and/or <em>custom/modules/&lt;module&gt;/languages</em></p>
         <p>A language is assigned prefix. The built in prefix is en_us. When you first install SuiteCRM, you will notice that there are many en_us.lang.php files place through out the application.</p>
-        <p>Each language file containers a list of key/value pairs. The keys are used by developers to include in their code. The values are used by the translators/developers to describe intent to the user.
+        <p>Each language file containers are a list of key/value pairs. The keys are used by developers to include in their code. The values are used by the translators/developers to describe intent to the user.
           SuiteCRM employs these keys as a reference, each key is referenced by the different language packs.
           So that the application doesn't need to know the translation until it has to use it.
           Then SuiteCRM can simply look up the key for the language of the current user.
         </p>
         <p>Example of a simple label:</p>
         <pre>
-          'Cases' => 'Cases',
+          'CaseKey' => 'Cases Translation',
         </pre>
         <p>Example of a dropdown:</p>
         <pre>
