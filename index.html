@@ -925,14 +925,14 @@
         <p>All application wide labels are kept in <em>include/languages/</em> and/or <em>custom/extension/application/Ext/Language/</em></p>
         <p>Module wide labels are kept in <em>module/&lt;module&gt;/languages</em> and/or <em>custom/modules/&lt;module&gt;/languages</em></p>
         <p>A language is assigned prefix. The built in prefix is en_us. When you first install SuiteCRM, you will notice that there are many en_us.lang.php files place through out the application.</p>
-        <p>Each language file containers a list of key/value pairs. The keys are used by developers to include in their code. The values are used by the translators/developers to describe intent to the user.
+        <p>Each language file containers are a list of key/value pairs. The keys are used by developers to include in their code. The values are used by the translators/developers to describe intent to the user.
           SuiteCRM employs these keys as a reference, each key is referenced by the different language packs.
           So that the application doesn't need to know the translation until it has to use it.
           Then SuiteCRM can simply look up the key for the language of the current user.
         </p>
         <p>Example of a simple label:</p>
         <pre>
-          'Cases' => 'Cases',
+          'CaseKey' => 'Cases Translation',
         </pre>
         <p>Example of a dropdown:</p>
         <pre>
